@@ -1,6 +1,8 @@
 # _AccuWeather_ OMG Microservice
 
 [![Open Microservice Guide](https://img.shields.io/badge/OMG%20Enabled-👍-green.svg?)](https://microservice.guide)
+[![Build Status](https://travis-ci.com/omg-services/accuweather.svg?branch=master)](https://travis-ci.com/omg-services/accuweather)
+[![codecov](https://codecov.io/gh/omg-services/accuweather/branch/master/graph/badge.svg)](https://codecov.io/gh/omg-services/accuweather)
 
 An OMG service to access the AccuWeather APIs.
 
