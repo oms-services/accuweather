@@ -23,51 +23,6 @@ actions:
     output:
       contentType: application/json
       type: object
-      properties:
-        WeatherIcon:
-          type: int
-        WeatherText:
-          type: string
-        RealFeelTemperature:
-          type: object
-          properties:
-            Imperial: &object_unit_type_value
-              type: object
-              properties:
-                Unit:
-                  type: string
-                UnitType:
-                  type: int
-                Value:
-                  type: float
-            Metric:
-              <<: *object_unit_type_value
-        Temperature:
-          properties:
-            type: object
-            Imperial:
-              <<: *object_unit_type_value
-            Metric:
-              <<: *object_unit_type_value
-        Wind:
-          type: object
-          properties:
-            Direction:
-              type: object
-              properties:
-                Degrees:
-                  type: int
-                English:
-                  type: string
-                Localized:
-                  type: string
-            Speed:
-              type: object
-              properties:
-                Imperial:
-                  <<: *object_unit_type_value
-                Metric:
-                  <<: *object_unit_type_value
 environment:
   API_KEY:
     help: |
