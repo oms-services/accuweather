@@ -1,11 +1,11 @@
-omg: 1
+oms: 1
 lifecycle:
   startup:
-    command: ["python", "/app/app.py"]
+    command: ['python', '/app/app.py']
 info:
   version: 1.0.0
   title: AccuWeather
-  description: This is a accuweather service
+  description: This is an AccuWeather service
 actions:
   forecast:
     http:
@@ -18,11 +18,10 @@ actions:
         required: true
         in: requestBody
         help: |
-          The location to retrieve the current weather status.
-          Example: "Amsterdam, Netherlands"
+          The location to retrieve the current weather status (eg "Amsterdam Netherlands"
     output:
       contentType: application/json
-      type: object
+      type: map
 environment:
   API_KEY:
     help: |
