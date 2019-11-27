@@ -1,11 +1,17 @@
 oms: 1
-lifecycle:
-  startup:
-    command: ['python', '/app/app.py']
 info:
   version: 1.0.0
   title: AccuWeather
   description: This is an AccuWeather service
+  contact:
+    name: Open Microservices
+    url: 'https://openmicroservices.org'
+    email: core@openmicroservices.org
+lifecycle:
+  startup:
+    command:
+      - python
+      - /app/app.py
 actions:
   forecast:
     http:
@@ -17,14 +23,16 @@ actions:
         type: string
         required: true
         in: requestBody
-        help: |
-          The location to retrieve the current weather status (eg "Amsterdam Netherlands"
+        help: >
+          The location to retrieve the current weather status (eg "Amsterdam
+          Netherlands"
     output:
       contentType: application/json
       type: map
 environment:
   API_KEY:
-    help: |
-      Create an AccuWeather developer account here - https://developer.accuweather.com
+    help: >
+      Create an AccuWeather developer account here -
+      https://developer.accuweather.com
     type: string
     required: true
